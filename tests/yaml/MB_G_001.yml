@@ -1,0 +1,23 @@
+pipelines:
+  - name: pipeline_MB_G_001
+    steps:
+      - name: MB_G_001_step1
+        type: Bash
+        configuration:
+          outputResources:
+            - name: MB_G_001_outputResource
+        execution:
+          onExecute:
+            - write_output MB_G_001_outputResource updatedBy=MB_G_001_step1 runNumber=$run_number
+      - name: MB_G_001_step2
+        type: Bash
+        configuration:
+          inputResources:
+            - name: MB_G_001_outputResource
+            - name: MB_G_001_inputResource
+        execution:
+          onExecute:
+            - printenv
+            - echo "$res_MB_G_001_inputResource_test $res_MB_G_001_outputResource_updatedBy"
+            - if [ "$res_MB_G_001_inputResource_test" != "MB_G_001" ]; then return 1; fi
+            - if [ "$res_MB_G_001_outputResource_updatedBy" != "MB_G_001_step1" ]; then return 1; fi

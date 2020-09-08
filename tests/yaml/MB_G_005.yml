@@ -1,0 +1,9 @@
+resources:
+  - name: MB_G_005_inputResource
+    type: PropertyBag
+    configuration:
+      creatingBranch: {{gitBranch}}
+  - name: MB_G_005_outputResource
+    type: PropertyBag
+    configuration:
+      creatingBranch: {{gitBranch}}

@@ -1,0 +1,21 @@
+pipelines:
+  - name: pipeline_MB_G_004
+    steps:
+      - name: MB_G_004_step1
+        type: Bash
+        configuration:
+          outputResources:
+            - name: MB_G_004_outputResource
+        execution:
+          onExecute:
+            - write_output MB_G_004_outputResource updatedBy=MB_G_004_step1
+      - name: MB_G_004_step2
+        type: Bash
+        configuration:
+          inputResources:
+            - name: MB_G_004_outputResource
+            - name: MB_G_004_inputResource
+        execution:
+          onExecute:
+            - if [ "$res_MB_G_004_inputResource_test" != "MB_G_004" ]; then return 1; fi
+            - if [ "$res_MB_G_004_outputResource_updatedBy" != "MB_G_004_step1" ]; then return 1; fi

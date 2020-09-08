@@ -1,0 +1,5 @@
+resources:
+  - name: MB_G_007_resource
+    type: PropertyBag
+    configuration:
+      creatingBranch: {{gitBranch}}
