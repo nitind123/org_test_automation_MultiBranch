@@ -1,0 +1,30 @@
+resources:
+  - name: MB_G_008_resource
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: s_artifactory
+      buildName: 'name'
+      buildNumber: '1'
+  - name: MB_G_008_outputResource
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: s_artifactory
+
+pipelines:
+  - name: pipeline_MB_G_008
+    steps:
+      - name: MB_G_008_inputStep
+        type: Bash
+        execution:
+          onExecute:
+            - echo "test"
+
+      - name: MB_G_008_step1
+        type: PublishBuildInfo
+        configuration:
+          inputResources:
+            - name: MB_G_008_resource
+          inputSteps:
+            - name: MB_G_008_inputStep
+          outputResources:
+            - name: MB_G_008_outputResource
