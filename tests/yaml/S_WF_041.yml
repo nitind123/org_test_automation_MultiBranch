@@ -1,0 +1,7 @@
+resources:
+  - name: S_WF_041_BuildInfo
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: s_artifactory
+      buildName: 'name'
+      buildNumber: '1'
