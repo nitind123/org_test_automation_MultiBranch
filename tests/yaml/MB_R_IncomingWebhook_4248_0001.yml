@@ -1,0 +1,17 @@
+resources:
+  - name: MB_R_IncomingWebhook_4248_0001_R_IW
+    type: IncomingWebhook
+    configuration:
+      webhookName: i_testUserIncomingWebhook
+
+pipelines:
+  - name: MB_R_IncomingWebhook_4248_0001
+    steps:
+      - name: MB_R_IncomingWebhook_4248_0001_1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: MB_R_IncomingWebhook_4248_0001_R_IW
+        execution:
+          onExecute:
+            - echo "incoming webhook was triggerred"
