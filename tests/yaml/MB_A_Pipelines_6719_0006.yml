@@ -1,0 +1,8 @@
+pipelines:
+  - name: MB_A_Pipelines_6719_0006
+    steps:
+      - name: MB_A_Pipelines_6719_0006_1
+        type: Bash
+        execution:
+          onExecute:
+            - echo "step was triggerred"
