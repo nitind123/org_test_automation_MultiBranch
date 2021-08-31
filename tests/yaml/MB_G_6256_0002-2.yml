@@ -1,0 +1,11 @@
+pipelines:
+  - name: pipeline_MB_G_6256_0002
+    steps:
+      - name: MB_G_6256_0002_step
+        type: Bash
+        configuration:
+          inputResources:
+            - name: MB_G_6256_0002_resource
+        execution:
+          onExecute:
+            - echo $res_MB_G_6256_0002_resource_creatingBranch

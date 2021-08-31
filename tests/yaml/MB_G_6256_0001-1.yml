@@ -1,0 +1,6 @@
+resources:
+  - name: r_BuildInfo
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: s_artifactory
+      buildName: mvn_sample_build_auto
