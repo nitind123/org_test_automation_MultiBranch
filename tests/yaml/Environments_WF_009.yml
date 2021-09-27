@@ -2,6 +2,6 @@ resources:
   - name: Environments_WF_009_BuildInfo
     type: BuildInfo
     configuration:
-      sourceArtifactory: Environments_WF_009
+      sourceArtifactory: first_Environments_WF_009
       buildName: 'name'
       buildNumber: '1'
