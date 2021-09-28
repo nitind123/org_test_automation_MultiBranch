@@ -1,0 +1,39 @@
+pipelines:
+  - name: MB_A_Search_Pipelines_6594_0021_1
+    steps:
+      - name: MB_A_Search_Pipelines_6594_0021_1_step_1
+        type: Bash
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "step was triggerred"
+  - name: MB_A_Search_Pipelines_6594_0021_2
+    steps:
+      - name: MB_A_Search_Pipelines_6594_0021_2_step_1
+        type: Bash
+        execution:
+          onExecute:
+            - echo "step was triggerred"
+            - sleep 5
+  - name: MB_A_Search_Pipelines_6594_0021_3
+    steps:
+      - name: MB_A_Search_Pipelines_6594_0021_3_step_1
+        type: Bash
+        execution:
+          onExecute:
+            - sleep 20
+            - echo "step was triggerred"
+  - name: MB_A_Search_Pipelines_6594_0021_4
+    steps:
+      - name: MB_A_Search_Pipelines_6594_0021_4_step_1
+        type: Bash
+        execution:
+          onExecute:
+            - echo "step was triggerred"
+  - name: MB_A_Search_Pipelines_6594_0021_5
+    steps:
+      - name: MB_A_Search_Pipelines_6594_0021_5_step_1
+        type: Bash
+        execution:
+          onExecute:
+            - echo "step was triggerred"
