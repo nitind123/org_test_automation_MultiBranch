@@ -5,7 +5,7 @@ pipelines:
         type: Bash
         execution:
           onExecute:
-            - sleep 10
+            - sleep 25
             - echo "step was triggerred"
   - name: MB_A_Search_Pipelines_6594_0021_2
     steps:
@@ -14,14 +14,14 @@ pipelines:
         execution:
           onExecute:
             - echo "step was triggerred"
-            - sleep 5
+            - sleep 1
   - name: MB_A_Search_Pipelines_6594_0021_3
     steps:
       - name: MB_A_Search_Pipelines_6594_0021_3_step_1
         type: Bash
         execution:
           onExecute:
-            - sleep 20
+            - sleep 45
             - echo "step was triggerred"
   - name: MB_A_Search_Pipelines_6594_0021_4
     steps:
