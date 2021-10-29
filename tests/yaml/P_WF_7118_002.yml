@@ -1,0 +1,7 @@
+resources:
+  - name: P_WF_7118_002_BuildInfo
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: s_artifactory
+      buildName: 'name'
+      buildNumber: '1'
