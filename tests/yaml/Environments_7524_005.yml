@@ -1,0 +1,5 @@
+resources:
+  - name: Environments_7524_005_Property_Bag
+    type: PropertyBag
+    configuration:
+      value: notSet
