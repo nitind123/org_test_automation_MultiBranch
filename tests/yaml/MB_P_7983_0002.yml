@@ -1,5 +1,5 @@
 template: true 
-valuesFilePath: ./values.yml
+valuesFilePath: ../values/gitRepoValues.yml
 
 pipelines:
   - name: test_pipeline1
