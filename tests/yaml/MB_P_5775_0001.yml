@@ -1,0 +1,8 @@
+pipelines:
+  - name: MB_P_5775_0001
+    steps:
+      - name: MB_P_5775_0001_1
+        type: Bash
+        execution:
+          onExecute: 
+            - echo hello
