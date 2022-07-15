@@ -1,0 +1,8 @@
+pipelines:
+  - name: MB_A_Search_Pipelines_Sources_9337_0001_1
+    steps:
+      - name: MB_A_Search_Pipelines_Sources_9337_0001_1_step_1
+        type: Bash
+        execution:
+          onExecute:
+            - echo "success"
