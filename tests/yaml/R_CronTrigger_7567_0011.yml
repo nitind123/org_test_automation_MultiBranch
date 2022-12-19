@@ -2,7 +2,7 @@ resources:
   - name: R_CronTrigger_7567_0011_resource
     type: CronTrigger
     configuration:
-      interval: "* * * * *"
+      interval: "*/1 * * * *"
 
 pipelines:
   - name: R_CronTrigger_7567_0011
