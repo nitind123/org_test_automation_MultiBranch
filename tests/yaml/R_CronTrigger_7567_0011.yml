@@ -3,6 +3,8 @@ resources:
     type: CronTrigger
     configuration:
       interval: "*/1 * * * *"
+    branches:
+         include: "master"
 
 pipelines:
   - name: R_CronTrigger_7567_0011
